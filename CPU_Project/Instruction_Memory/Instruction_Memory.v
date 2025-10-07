@@ -1,0 +1,41 @@
+module Instruction_Memory #(
+    parameter DATA_WIDTH = 32,
+    parameter MEM_DEPTH = 256
+)(
+    input [DATA_WIDTH-1:0] Address, 
+    output [DATA_WIDTH-1:0] Instruction
+);
+    reg [DATA_WIDTH-1:0] memory [0:MEM_DEPTH-1]; // 256 x 32 bits memory
+    integer i;
+    initial begin
+        // opcode[31:27] | rd[26:22] | rs1[21:17] | rs2[16:12] | immediate/padding[11:0]
+        memory[0]  = {5'b00000, 5'd1, 5'd2, 5'd3, 12'b0}; // ADD R1 = R2 + R3
+        memory[1]  = {5'b00001, 5'd2, 5'd1, 5'd3, 12'b0}; // SUB R2 = R1 - R3
+        memory[2]  = {5'b00010, 5'd3, 5'd0, 5'd1, 12'b0}; // AND R3 = R0 & R1
+        memory[3]  = {5'b00011, 5'd4, 5'd2, 5'd1, 12'b0}; // OR R4 = R2 | R1
+        memory[4]  = {5'b00100, 5'd5, 5'd3, 5'd4, 12'b0}; // XOR R5 = R3 ^ R4
+        memory[5]  = {5'b00101, 5'd1, 5'd5, 5'd3, 12'b0}; // NOR R1 = ~(R5 | R3)
+        memory[6]  = {5'b00110, 5'd2, 5'd1, 5'd3, 12'b0}; // SLT R2 = (R1 < R3)
+        memory[7]  = {5'b00111, 5'd3, 5'd2, 5'd0, 12'd1}; // SLL R3 = R2 << 1
+        memory[8]  = {5'b01000, 5'd4, 5'd3, 5'd0, 12'd1}; // SRL R4 = R3 >> 1
+        memory[9]  = {5'b01001, 5'd5, 5'd0, 5'd0, 12'b0}; // NOT R5 = ~R0
+        memory[10] = {5'b01010, 5'd1, 5'd1, 5'd0, 12'd1}; // INC R1 = R1 + 1
+        memory[11] = {5'b01011, 5'd2, 5'd2, 5'd0, 12'd1}; // DEC R2 = R2 - 1
+        memory[12] = {5'b01100, 5'd3, 5'd3, 5'd0, 12'd1}; // ROL R3 = ROL(R3,1)
+        memory[13] = {5'b01101, 5'd4, 5'd4, 5'd0, 12'd1}; // ROR R4 = ROR(R4,1)
+        memory[14] = {5'b01110, 5'd1, 5'd0, 5'd0, 12'b0}; // PASS B → R1 = R0
+        memory[15] = {5'b01111, 5'd2, 5'd2, 5'd0, 12'b0}; // PASS A → R2 = R2
+        // Immediate operations
+        memory[16] = {5'b00000, 5'd6, 5'd6, 5'd0, 12'd10}; // ADD R6 = R6 + 10
+        memory[17] = {5'b00001, 5'd7, 5'd7, 5'd0, -12'd5};  // SUB R7 = R7 - 5
+        memory[18] = {5'b00010, 5'd8, 5'd8, 5'd0, 12'h0F0}; // AND R8 = R8 & 0xF0
+        memory[19] = {5'b00011, 5'd9, 5'd9, 5'd0, 12'h00F}; // OR R9 = R9 | 0x0F
+        memory[20] = {5'b00100, 5'd10, 5'd10, 5'd0, 12'hFF0}; // XOR R10 = R10 ^ 0xFF0
+        memory[21] = {5'b00101, 5'd11, 5'd11, 5'd0, 12'hF0F}; // NOR R11 = ~(R11 | 0xF0F)
+        memory[22] = {5'b00110, 5'd12, 5'd12, 5'd0, 12'd100}; // SLT R12 = (R12 < 100)
+        // Fill remaining with NOP
+        for (i = 23; i < MEM_DEPTH; i = i + 1)
+            memory[i] = {DATA_WIDTH{1'b0}}; // NOP
+    end
+    assign Instruction = memory[Address[$clog2(MEM_DEPTH)+1:2]]; // [9:2] for word-aligned access to 256 words  
+endmodule

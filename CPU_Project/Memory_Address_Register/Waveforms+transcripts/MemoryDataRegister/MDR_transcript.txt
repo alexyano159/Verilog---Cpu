@@ -1,0 +1,24 @@
+# Time:0 | clock=0 | reset=1 | write_enable=0 | data_in=deadbeef | data_out=00000000
+# Time:5 | clock=1 | reset=1 | write_enable=0 | data_in=deadbeef | data_out=00000000
+# Time:10 | clock=0 | reset=0 | write_enable=0 | data_in=deadbeef | data_out=00000000
+# Time:15 | clock=1 | reset=0 | write_enable=0 | data_in=deadbeef | data_out=00000000
+# Time:20 | clock=0 | reset=0 | write_enable=1 | data_in=deadbeef | data_out=00000000
+# Time:25 | clock=1 | reset=0 | write_enable=1 | data_in=deadbeef | data_out=deadbeef
+# Time:30 | clock=0 | reset=0 | write_enable=0 | data_in=deadbeef | data_out=deadbeef
+# Time:35 | clock=1 | reset=0 | write_enable=0 | data_in=deadbeef | data_out=deadbeef
+# Time:40 | clock=0 | reset=0 | write_enable=0 | data_in=deadbeef | data_out=deadbeef
+# Time:45 | clock=1 | reset=0 | write_enable=0 | data_in=deadbeef | data_out=deadbeef
+# Time:50 | clock=0 | reset=0 | write_enable=1 | data_in=cafebabe | data_out=deadbeef
+# Time:55 | clock=1 | reset=0 | write_enable=1 | data_in=cafebabe | data_out=cafebabe
+# Time:60 | clock=0 | reset=0 | write_enable=0 | data_in=cafebabe | data_out=cafebabe
+# Time:65 | clock=1 | reset=0 | write_enable=0 | data_in=cafebabe | data_out=cafebabe
+# Time:70 | clock=0 | reset=0 | write_enable=0 | data_in=cafebabe | data_out=cafebabe
+# Time:75 | clock=1 | reset=0 | write_enable=0 | data_in=cafebabe | data_out=cafebabe
+# Time:80 | clock=0 | reset=1 | write_enable=0 | data_in=cafebabe | data_out=00000000
+# Time:85 | clock=1 | reset=1 | write_enable=0 | data_in=cafebabe | data_out=00000000
+# Time:90 | clock=0 | reset=0 | write_enable=0 | data_in=cafebabe | data_out=00000000
+# Time:95 | clock=1 | reset=0 | write_enable=0 | data_in=cafebabe | data_out=00000000
+# Time:100 | clock=0 | reset=0 | write_enable=0 | data_in=cafebabe | data_out=00000000
+# Time:105 | clock=1 | reset=0 | write_enable=0 | data_in=cafebabe | data_out=00000000
+# ** Note: $stop    : C:/Verilog/simulation/Memory_Data_Register_tb.v(53)
+#    Time: 110 ps  Iteration: 0  Instance: /Memory_Data_Register_tb

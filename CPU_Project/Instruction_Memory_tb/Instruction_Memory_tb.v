@@ -12,11 +12,11 @@ module Instruction_Memory_tb;
         .Instruction(Instruction)
     );
 
-    reg [DATA_WIDTH-1:0] expected [0:22];
+    reg [DATA_WIDTH-1:0] expected [0:33];
     integer i;
 
     initial begin
-        // Initialize expected instructions
+        // ALU & Immediate instructions
         expected[0]  = {5'b00000, 5'd1, 5'd2, 5'd3, 12'b0};
         expected[1]  = {5'b00001, 5'd2, 5'd1, 5'd3, 12'b0};
         expected[2]  = {5'b00010, 5'd3, 5'd0, 5'd1, 12'b0};
@@ -41,16 +41,30 @@ module Instruction_Memory_tb;
         expected[21] = {5'b00101, 5'd11, 5'd11, 5'd0, 12'hF0F};
         expected[22] = {5'b00110, 5'd12, 5'd12, 5'd0, 12'd100};
 
+        // Memory & Control instructions
+        expected[23] = {5'b10000, 5'd1, 5'd0, 5'd0, 12'd50};    // LOAD R1 = MEM[R0 + 50]
+        expected[24] = {5'b10001, 5'd0, 5'd0, 5'd2, 12'd60};    // STORE MEM[R0 + 60] = R2
+        expected[25] = {5'b10000, 5'd3, 5'd1, 5'd0, 12'd4};     // LOAD R3 = MEM[R1 + 4]
+        expected[26] = {5'b10001, 5'd0, 5'd2, 5'd4, 12'd8};     // STORE MEM[R2 + 8] = R4
+        expected[27] = {5'b10010, 5'd0, 5'd0, 5'd0, 12'd35};    // JUMP to address 35
+        expected[28] = {5'b10011, 5'd0, 5'd2, 5'd3, 12'd40};    // BEQ if R2 == R3, branch to 40
+        expected[29] = {5'b10100, 5'd0, 5'd4, 5'd5, 12'd45};    // BNE if R4 != R5, branch to 45
+        expected[30] = {5'b10101, 5'd0, 5'd6, 5'd7, 12'd50};    // BLT if R6 < R7, branch to 50
+        expected[31] = {5'b10110, 5'd0, 5'd8, 5'd9, 12'd55};    // BGT if R8 > R9, branch to 55
+        expected[32] = {5'b10111, 5'd0, 5'd10, 5'd11, 12'd60};  // BGE if R10 >= R11, branch to 60
+        expected[33] = {5'b11000, 5'd0, 5'd12, 5'd13, 12'd65};  // BLE if R12 <= R13, branch to 65
+
         // Test all instructions
-        for (i = 0; i < 23; i = i + 1) begin
-            Address = i * 4; //word aligned
-            #1;
+        for (i = 0; i < 34; i = i + 1) begin
+            Address = i * 4; // word aligned
+            #1; // allow propagation
             if (Instruction !== expected[i]) begin
-                $display("ERROR at Address %d: got %b, expected %b", Address, Instruction, expected[i]);
+                $display("ERROR at Address %0d: got %b, expected %b", Address, Instruction, expected[i]);
             end else begin
-                $display("OK at Address %d: Instruction = %b", Address, Instruction);
+                $display("OK at Address %0d: Instruction = %b", Address, Instruction);
             end
         end
+        $display("Instruction memory testbench completed.");
+        $stop;
     end
-
 endmodule

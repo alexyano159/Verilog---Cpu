@@ -16,7 +16,7 @@ module Instruction_Memory_tb;
     integer i;
 
     initial begin
-        // Match the encoding exactly to Instruction_Memory.v!
+        // Initialize expected instructions
         expected[0]  = {5'b00000, 5'd1, 5'd2, 5'd3, 12'b0};
         expected[1]  = {5'b00001, 5'd2, 5'd1, 5'd3, 12'b0};
         expected[2]  = {5'b00010, 5'd3, 5'd0, 5'd1, 12'b0};
@@ -43,7 +43,7 @@ module Instruction_Memory_tb;
 
         // Test all instructions
         for (i = 0; i < 23; i = i + 1) begin
-            Address = i * 4;
+            Address = i * 4; //word aligned
             #1;
             if (Instruction !== expected[i]) begin
                 $display("ERROR at Address %d: got %b, expected %b", Address, Instruction, expected[i]);
@@ -52,4 +52,5 @@ module Instruction_Memory_tb;
             end
         end
     end
+
 endmodule

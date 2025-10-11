@@ -7,6 +7,7 @@ module Control_Unit_tb;
     reg negative_flag;
     reg overflow_flag;
     wire [4:0] AluControl;
+    wire [3:0] current_state;
     wire AluSrc;
     wire MemtoReg;
     wire RegDst;
@@ -17,7 +18,7 @@ module Control_Unit_tb;
     wire Jump;
     wire branch_taken;
 
-    Control_Unit uut (
+    Control_Unit cu (
         .clk(clk),
         .reset(reset),
         .instruction(instruction),
@@ -34,7 +35,8 @@ module Control_Unit_tb;
         .MemWrite(MemWrite),
         .Branch(Branch),
         .branch_taken(branch_taken),
-        .Jump(Jump)
+        .Jump(Jump),
+        .current_state(current_state)
     );
 
     // Clock generation
@@ -120,16 +122,16 @@ module Control_Unit_tb;
             $display("\n--- Testing Instruction %0d: %b ---", i, instruction);
             @(posedge clk); // FETCH
             $display("State: %s | Time=%0d AluControl=%b AluSrc=%b MemtoReg=%b RegDst=%b RegWrite=%b MemRead=%b MemWrite=%b Branch=%b branch_taken=%b Jump=%b", 
-                state_to_string(uut.current_state), $time, AluControl, AluSrc, MemtoReg, RegDst, RegWrite, MemRead, MemWrite, Branch, branch_taken, Jump);
+                state_to_string(current_state), $time, AluControl, AluSrc, MemtoReg, RegDst, RegWrite, MemRead, MemWrite, Branch, branch_taken, Jump);
             @(posedge clk); // DECODE
             $display("State: %s | Time=%0d AluControl=%b AluSrc=%b MemtoReg=%b RegDst=%b RegWrite=%b MemRead=%b MemWrite=%b Branch=%b branch_taken=%b Jump=%b", 
-                state_to_string(uut.current_state), $time, AluControl, AluSrc, MemtoReg, RegDst, RegWrite, MemRead, MemWrite, Branch, branch_taken, Jump);
+                state_to_string(current_state), $time, AluControl, AluSrc, MemtoReg, RegDst, RegWrite, MemRead, MemWrite, Branch, branch_taken, Jump);
             @(posedge clk); // EXECUTE or MEMORY/WRITEBACK
             $display("State: %s | Time=%0d AluControl=%b AluSrc=%b MemtoReg=%b RegDst=%b RegWrite=%b MemRead=%b MemWrite=%b Branch=%b branch_taken=%b Jump=%b", 
-                state_to_string(uut.current_state), $time, AluControl, AluSrc, MemtoReg, RegDst, RegWrite, MemRead, MemWrite, Branch, branch_taken, Jump);
+                state_to_string(current_state), $time, AluControl, AluSrc, MemtoReg, RegDst, RegWrite, MemRead, MemWrite, Branch, branch_taken, Jump);
             @(posedge clk); // next state
             $display("State: %s | Time=%0d AluControl=%b AluSrc=%b MemtoReg=%b RegDst=%b RegWrite=%b MemRead=%b MemWrite=%b Branch=%b branch_taken=%b Jump=%b", 
-                state_to_string(uut.current_state), $time, AluControl, AluSrc, MemtoReg, RegDst, RegWrite, MemRead, MemWrite, Branch, branch_taken, Jump);
+                state_to_string(current_state), $time, AluControl, AluSrc, MemtoReg, RegDst, RegWrite, MemRead, MemWrite, Branch, branch_taken, Jump);
         end
         $stop;
     end

@@ -3,9 +3,7 @@ module Control_Unit_tb;
     reg reset;
     reg [31:0] instruction;
     reg zero_flag;
-    reg carry_flag;
     reg negative_flag;
-    reg overflow_flag;
     wire [4:0] AluControl;
     wire [3:0] current_state;
     wire AluSrc;
@@ -23,9 +21,7 @@ module Control_Unit_tb;
         .reset(reset),
         .instruction(instruction),
         .zero_flag(zero_flag),
-        .carry_flag(carry_flag),
         .negative_flag(negative_flag),
-        .overflow_flag(overflow_flag),
         .AluControl(AluControl),
         .AluSrc(AluSrc),
         .MemtoReg(MemtoReg),
@@ -101,10 +97,8 @@ module Control_Unit_tb;
 
         // Default flags
         zero_flag = 0;
-        carry_flag = 0;
         negative_flag = 0;
-        overflow_flag = 0;
-
+        
         for (i = 0; i < 25; i = i + 1) begin
             instruction = test_instructions[i];
 

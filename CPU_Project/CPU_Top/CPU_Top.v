@@ -25,6 +25,7 @@ module CPU_Top #(
     , output [DATA_WIDTH-1:0] ir_debug
     , output [ADDR_WIDTH-1:0] mar_debug
     , output [DATA_WIDTH-1:0] b
+    , output [DATA_WIDTH-1:0] a
     , output [4:0] AluControl
     , output AluSrc
     , output MemtoReg
@@ -47,6 +48,7 @@ wire [DATA_WIDTH-1:0] alu_result;
 wire alu_carry, alu_zero, alu_overflow, alu_negative;
 wire [4:0] AluControl;
 wire AluSrc, MemtoReg, RegDst, RegWrite, MemRead, MemWrite, Jump, Branch, branch_taken;
+wire [3:0] current_state;
 
 // ALU
 Cpu_Alu alu (
@@ -131,7 +133,8 @@ Control_Unit cu (
     .MemWrite(MemWrite),
     .Jump(Jump),
     .Branch(Branch),
-    .branch_taken(branch_taken)
+    .branch_taken(branch_taken),
+    .current_state(current_state)
 );
 // Assign outputs to memory interfaces
 assign rd_addr = ir[26:22];   // according to instruction format
@@ -153,8 +156,8 @@ assign data_address=mar[7:0];// Address to RAM from MAR
 assign write_data=reg_data2;// Data to write to RAM from register
 assign write_enable=MemWrite;// RAM Write Enable
 // Control signals for registers
-assign ir_load = 1'b1; //Single cycle design, always load instruction
-assign pc_inc = 1'b0; // PC increment handled in next PC logic
+assign ir_load = current_state == 4'b0000; // Load IR in FETCH state
+assign pc_inc = current_state == 4'b0001; // PC increment in DECODE state
 assign pc_load = Jump || (Branch && branch_taken); // Load PC on jump or taken branch
 assign mar_load = MemRead || MemWrite; // Load MAR when accessing memory
 assign mdr_load = MemRead; // Load MDR on memory read

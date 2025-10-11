@@ -4,9 +4,7 @@ module Control_Unit(
     input reset,
     input [31:0] instruction,
     input zero_flag,
-    input carry_flag,
     input negative_flag,
-    input overflow_flag,
     //outputs
     output reg [4:0] AluControl,
     output reg AluSrc, // New signal to select ALU source (register or immediate)
@@ -17,14 +15,15 @@ module Control_Unit(
     output reg MemWrite, // New signal to indicate memory write operation
     output reg Jump,
     output reg Branch, // New signal to indicate a branch instruction
-    output reg branch_taken // New signal to indicate if branch condition is met
+    output reg branch_taken, // New signal to indicate if branch condition is met
+    output reg [3:0] current_state 
 );
     localparam FETCH= 4'b0000,
                DECODE= 4'b0001,
                EXECUTE= 4'b0010,
                MEMORY= 4'b0011,
                WRITEBACK= 4'b0100;
-    reg [3:0] current_state, next_state;
+    reg [3:0] next_state;
     wire [4:0] opcode;
     assign opcode = instruction[31:27];
 
@@ -37,6 +36,7 @@ module Control_Unit(
 
     always @(*) begin 
         // Default values
+        next_state = current_state;
         AluSrc   = 1'b0;
         MemtoReg = 1'b0;
         RegDst   = 1'b0;

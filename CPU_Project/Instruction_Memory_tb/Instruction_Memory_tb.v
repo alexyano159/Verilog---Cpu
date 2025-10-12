@@ -1,12 +1,15 @@
 module Instruction_Memory_tb;
     parameter DATA_WIDTH = 32;
     parameter MEM_DEPTH = 256;
-    reg [DATA_WIDTH-1:0] Address;
+    parameter ADDR_WIDTH = 8;
+
+    reg [ADDR_WIDTH-1:0] Address;
     wire [DATA_WIDTH-1:0] Instruction;
 
     Instruction_Memory #(
         .DATA_WIDTH(DATA_WIDTH),
-        .MEM_DEPTH(MEM_DEPTH)
+        .MEM_DEPTH(MEM_DEPTH),
+        .ADDR_WIDTH(ADDR_WIDTH)
     ) im (
         .Address(Address),
         .Instruction(Instruction)
@@ -56,7 +59,7 @@ module Instruction_Memory_tb;
 
         // Test all instructions
         for (i = 0; i < 34; i = i + 1) begin
-            Address = i * 4; // word aligned
+            Address = i ;
             #1; // allow propagation
             if (Instruction !== expected[i]) begin
                 $display("ERROR at Address %0d: got %b, expected %b", Address, Instruction, expected[i]);

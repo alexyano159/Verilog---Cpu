@@ -1,8 +1,9 @@
 module Instruction_Memory #(
     parameter DATA_WIDTH = 32,
-    parameter MEM_DEPTH = 256
+    parameter MEM_DEPTH = 256,
+    parameter ADDR_WIDTH = 8
 )(
-    input [DATA_WIDTH-1:0] Address, 
+    input [ADDR_WIDTH-1:0] Address, 
     output [DATA_WIDTH-1:0] Instruction
 );
     reg [DATA_WIDTH-1:0] memory [0:MEM_DEPTH-1]; // 256 x 32 bits memory
@@ -53,5 +54,5 @@ module Instruction_Memory #(
         for (i = 34; i < MEM_DEPTH; i = i + 1)
             memory[i] = {DATA_WIDTH{1'b0}}; // NOP
     end
-    assign Instruction = memory[Address[$clog2(MEM_DEPTH)+1:2]]; // [9:2] for word-aligned access to 256 words  
+    assign Instruction = memory[Address]; 
 endmodule

@@ -1,10 +1,10 @@
-**#Multicycle Verilog CPU Project**
+#Multicycle Verilog CPU Project
 
 This repository contains the source code, testbenches, and documentation(png's of rtlview, waveforms and transcripts) for a custom multicycle 32-bit CPU.
 The CPU suppors a variety of instruction types, including ALU operations, memory access and control flow (branch and jump).
 I created this project as part of my learning journey in digital design, out of interest and curiosity in the field.
 
-**##Features**
+##Features
 
 - **32-bit architecture**: All registers, data paths, and instructions are 32 bits wide.
 - **Word-addressed memory**: Both instruction and data memory are word-addressed, with each word being 32 bits wide and 256 slots available.

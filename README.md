@@ -1,7 +1,7 @@
 # Multicycle Verilog CPU Project
 
-This repository contains the source code, testbenches, and documentation(png's of rtlview, waveforms and transcripts) for a custom multicycle 32-bit CPU.
-The CPU suppors a variety of instruction types, including ALU operations, memory access and control flow (branch and jump).
+This repository contains the source code, testbenches, and documentation (including PNGs of RTL views, waveforms, and transcripts) for a custom multicycle 32-bit CPU.  
+The CPU supports a variety of instruction types, including ALU operations, memory access, and control flow (branch and jump).  
 I created this project as part of my learning journey in digital design, out of interest and curiosity in the field.
 
 ## Features
@@ -39,7 +39,6 @@ The following is a sample of the simulation transcript (ModelSim), showing the C
 # Time=63 | PC=00000004 | IR=00443000 | Reg1=12345678 | Reg2=00000001 | ALU=12345679 | MAR=00 | MDR=00000000 | DataAddr=00 | WriteData=00000001 | WriteEn=0
 ...
 ```
-
 *Only the first part of the simulation is shown. You can run longer tests as needed.*
 
 ## Design Files
@@ -73,14 +72,17 @@ The following is a sample of the simulation transcript (ModelSim), showing the C
 - `CPU_Top.sdc` – Synthesis constraints for FPGA/ASIC implementation; defines the clock for the top-level CPU module
 
 ## Documentation Files
+
 - `instruction_set.md` – Full list of supported instructions and opcodes
 - `RTL_Views/` – Folder containing RTL schematic views of CPU modules
-- `Waveform+transcripts/` – Folder containing simulation waveforms and ModelSim 
+- `Waveform+transcripts/` – Folder containing simulation waveforms and ModelSim transcripts
 
 ## About the Project
 
 This project was developed and documented by **alexyano159**.  
 During development, I used **GitHub Copilot** as an AI assistant for code structure, debugging, and documentation, which helped accelerate my learning and improve code quality.
+
+---
 
 **Questions or suggestions?**  
 Open an issue or contact me at [alexyano159@gmail.com]!

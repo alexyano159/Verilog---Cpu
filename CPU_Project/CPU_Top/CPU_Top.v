@@ -15,7 +15,7 @@ module CPU_Top #(
     // Debugging Outputs(for waveform viewing)
    `ifdef DEBUG
     , output reg_write_enable // RegWrite signal from CU
-    , output reg_read_enable  // Always reading registers
+    , output reg_read_enable  
     , output [DATA_WIDTH-1:0] alu_result_debug
     , output [DATA_WIDTH-1:0] pc_current_debug
     , output [DATA_WIDTH-1:0] reg_data1_debug
@@ -168,7 +168,7 @@ assign mdr_debug          = mdr;
 assign ir_debug           = ir;
 assign mar_debug          = mar;
 assign reg_write_enable   = RegWrite;
-assign reg_read_enable    = 1'b1; // Always reading registers
+assign reg_read_enable    = MemRead; // Read registers when MemRead is active
 assign pc_debug           = pc_current;
 assign b_debug            = alu_B;
 assign a_debug            = alu_A;

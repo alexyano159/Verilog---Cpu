@@ -87,14 +87,14 @@ module CPU_Top_tb;
     `endif
 
     //instantiate the Instruction Memory
-    Instruction_Memory #(
-        .DATA_WIDTH(DATA_WIDTH),
-        .MEM_DEPTH(MEM_DEPTH)
-    ) inst_mem (
-        .Address(instruction_address),
-        .Instruction(instruction_data)
-    );
-
+   Instruction_Memory #(
+    .DATA_WIDTH(DATA_WIDTH),
+    .MEM_DEPTH(MEM_DEPTH),
+    .ADDR_WIDTH(ADDR_WIDTH)
+) inst_mem (
+    .Address(instruction_address),
+    .Instruction(instruction_data)
+);
     //instantiate the Data Memory
     Data_Memory #(
         .DATA_WIDTH(DATA_WIDTH),

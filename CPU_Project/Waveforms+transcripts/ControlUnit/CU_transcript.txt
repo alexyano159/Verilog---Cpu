@@ -1,0 +1,150 @@
+# 
+# --- Testing Instruction 0: 00000000010001000011000000000000 ---
+# State:      FETCH | Time=15 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=25 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=35 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=45 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 1: 00001000010001000011000000000000 ---
+# State:      FETCH | Time=55 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=65 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=75 AluControl=00001 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=85 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 2: 00010000010001000011000000000000 ---
+# State:      FETCH | Time=95 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=105 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=115 AluControl=00010 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=125 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 3: 00011000010001000011000000000000 ---
+# State:      FETCH | Time=135 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=145 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=155 AluControl=00011 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=165 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 4: 00100000010001000011000000000000 ---
+# State:      FETCH | Time=175 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=185 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=195 AluControl=00100 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=205 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 5: 00101000010001000011000000000000 ---
+# State:      FETCH | Time=215 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=225 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=235 AluControl=00101 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=245 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 6: 00110000010001000011000000000000 ---
+# State:      FETCH | Time=255 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=265 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=275 AluControl=00110 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=285 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 7: 00111000010001000000000000000000 ---
+# State:      FETCH | Time=295 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=305 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=315 AluControl=00111 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=325 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 8: 01000000010001000000000000000000 ---
+# State:      FETCH | Time=335 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=345 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=355 AluControl=01000 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=365 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 9: 01001000010001000000000000000000 ---
+# State:      FETCH | Time=375 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=385 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=395 AluControl=01001 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=405 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 10: 01010000010001000000000000000000 ---
+# State:      FETCH | Time=415 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=425 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=435 AluControl=01010 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=445 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 11: 01011000010001000000000000000000 ---
+# State:      FETCH | Time=455 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=465 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=475 AluControl=01011 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=485 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 12: 01100000010001000000000000000000 ---
+# State:      FETCH | Time=495 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=505 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=515 AluControl=01100 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=525 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 13: 01101000010001000000000000000000 ---
+# State:      FETCH | Time=535 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=545 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=555 AluControl=01101 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=565 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 14: 01110000010001000011000000000000 ---
+# State:      FETCH | Time=575 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=585 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=595 AluControl=01110 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=605 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 15: 01111000010001000011000000000000 ---
+# State:      FETCH | Time=615 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=625 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=635 AluControl=01111 AluSrc=0 MemtoReg=0 RegDst=1 RegWrite=1 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:  WRITEBACK | Time=645 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 16: 10000000010001000000000000000001 ---
+# State:      FETCH | Time=655 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=665 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=675 AluControl=00000 AluSrc=1 MemtoReg=1 RegDst=0 RegWrite=1 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     MEMORY | Time=685 AluControl=00000 AluSrc=1 MemtoReg=1 RegDst=0 RegWrite=1 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 17: 10001000010001000011000000000010 ---
+# State:  WRITEBACK | Time=695 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:      FETCH | Time=705 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=715 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=725 AluControl=00000 AluSrc=1 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=1 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 18: 10010000000000000000000000000011 ---
+# State:     MEMORY | Time=735 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:      FETCH | Time=745 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=755 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=765 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=1
+# 
+# --- Testing Instruction 19: 10011000000001000011000000000100 ---
+# State:      FETCH | Time=775 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=785 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=795 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=1 branch_taken=1 Jump=0
+# State:      FETCH | Time=805 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 20: 10100000000001000011000000000101 ---
+# State:     DECODE | Time=815 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=825 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=1 branch_taken=1 Jump=0
+# State:      FETCH | Time=835 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=845 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 21: 10101000000001000011000000000110 ---
+# State:    EXECUTE | Time=855 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=1 branch_taken=1 Jump=0
+# State:      FETCH | Time=865 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=875 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=885 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=1 branch_taken=1 Jump=0
+# 
+# --- Testing Instruction 22: 10110000000001000011000000000111 ---
+# State:      FETCH | Time=895 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=905 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=915 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=1 branch_taken=1 Jump=0
+# State:      FETCH | Time=925 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 23: 10111000000001000011000000001000 ---
+# State:     DECODE | Time=935 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=945 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=1 branch_taken=1 Jump=0
+# State:      FETCH | Time=955 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=965 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# 
+# --- Testing Instruction 24: 11000000000001000011000000001001 ---
+# State:    EXECUTE | Time=975 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=1 branch_taken=1 Jump=0
+# State:      FETCH | Time=985 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=1 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:     DECODE | Time=995 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=0 branch_taken=0 Jump=0
+# State:    EXECUTE | Time=1005 AluControl=00000 AluSrc=0 MemtoReg=0 RegDst=0 RegWrite=0 MemRead=0 MemWrite=0 Branch=1 branch_taken=1 Jump=0
